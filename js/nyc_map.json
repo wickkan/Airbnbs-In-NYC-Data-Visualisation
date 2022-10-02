@@ -1,7 +1,8 @@
 {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"width": 800,
-"height": 450,
+"width": 500,
+"height": 340,
+"background": null,
 "title": { "text": "Spread of Airbnbs Across New York City", "font": "sans-serif","fontSize": {"expr": "20"}},
 "projection": {"type": "equalEarth"},
 "layer": [
@@ -15,7 +16,7 @@
 {
   "data": {
 "url":
-"https://raw.githubusercontent.com/wickkan/FIT3179-Homework-Week-9/main/AB_NYC_2019.csv"
+"https://raw.githubusercontent.com/wickkan/FIT3179-Vis-2/main/data/AB_NYC_2019.csv"
 },
 "mark": {"type": "circle", "tooltip": {"content": "data"}},
 "encoding": {

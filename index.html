@@ -11,19 +11,60 @@
 
     <script src="vega_lite_vis.js"></script>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
 
     <title>FIT3179 - Visualisation 2</title>
 </head>
-<body class="b">
-    <h1 id="heading">Airbnbs in New York City</h1>
-    <div id="nyc_map">
+<body>
+    <div class="header_img">
+        <img id="nyc_picture" src="https://www.pngmart.com/files/16/New-York-Skyline-City-Transparent-PNG.png">
     </div>
+
+    <div class="header_txt">
+        <h1 id="heading">Airbnbs in New York City</h1>
+    </div>
+
+    <div class="spacing">
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur vitae quibusdam, impedit harum officiis ipsam
+                praesentium cupiditate dolorem incidunt! Aliquam facilis nulla, impedit quidem eveniet sit alias, est labore
+                quibusdam vero ab? Aut veritatis reprehenderit, qui incidunt magni eos similique quasi tempore aperiam. Veniam
+                quisquam minus omnis odit vitae? Reiciendis.
+            </p>
+        </div>
+        <div class="column">
+            <div id="nyc_map">
+            </div>
+        </div>
+        <div class="column">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aut amet modi ex in, ipsum molestiae pariatur animi
+                omnis dignissimos. Dolorum temporibus voluptas exercitationem similique eveniet. Libero magni eaque ipsum aspernatur
+                dicta maxime natus porro totam. Veniam qui tenetur laborum a, fuga, expedita culpa sunt eos incidunt, autem eveniet
+                architecto.
+            </p>
+        </div>
+    </div>
+
+    <div class="intro">
+        
+        
+        
+    </div>
+
+    
     
 
 <script type="text/javascript">
 
     var vg_1 = "js/nyc_map.json";
-    vegaEmbed("#nyc_map", vg_1).then(function (result) {
+    vegaEmbed("#nyc_map", vg_1, { "actions": false }).then(function (result) {
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 
     }).catch(console.error);
