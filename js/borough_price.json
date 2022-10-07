@@ -1,0 +1,24 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {"url": "https://raw.githubusercontent.com/wickkan/FIT3179-Homework-Week-9/main/AB_NYC_2019.csv"},
+  "height" : 400,
+  "width" : 400,
+  "title": { "text": "Price Distribution for Each Borough", "font": "sans-serif","fontSize": {"expr": "18"}},
+  "transform": [{"filter": "datum.neighbourhood_group =='Queens'"}],
+  "mark": {
+    "type" : "line",
+    "clip": true
+  },
+  "encoding": {
+    "x": {
+      "field": "price", 
+      "type": "quantitative",
+      "scale" : { "domain" : [0,500] },
+      "title" : "Price < 500"
+      },
+    "y": {
+      "aggregate": "count",
+      "title" : "Number of Airbnbs"
+      }
+  }
+}

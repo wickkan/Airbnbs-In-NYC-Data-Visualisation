@@ -29,13 +29,17 @@
     <div class="spacing">
     </div>
 
+    <!--
+        first row
+    -->
+
     <div class="row">
         <div class="column">
             <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur vitae quibusdam, impedit harum officiis ipsam
-                praesentium cupiditate dolorem incidunt! Aliquam facilis nulla, impedit quidem eveniet sit alias, est labore
-                quibusdam vero ab? Aut veritatis reprehenderit, qui incidunt magni eos similique quasi tempore aperiam. Veniam
-                quisquam minus omnis odit vitae? Reiciendis.
+                NYC Map Para 1
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex eum rem asperiores inventore officiis debitis error quos odit placeat aspernatur quis reprehenderit aliquam odio distinctio veritatis sed totam minus repellendus beatae, incidunt commodi consectetur quam nesciunt. Quis possimus hic porro.
             </p>
         </div>
         <div class="column">
@@ -44,22 +48,93 @@
         </div>
         <div class="column">
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aut amet modi ex in, ipsum molestiae pariatur animi
-                omnis dignissimos. Dolorum temporibus voluptas exercitationem similique eveniet. Libero magni eaque ipsum aspernatur
-                dicta maxime natus porro totam. Veniam qui tenetur laborum a, fuga, expedita culpa sunt eos incidunt, autem eveniet
-                architecto.
+                NYC Map Para 2
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus laborum numquam ad, facere accusantium doloremque libero? Deleniti eveniet architecto tenetur veniam libero atque voluptatibus fugit nihil consequuntur recusandae ex iste officia sint rem esse cumque quos, cupiditate iure aliquid. Eum.
             </p>
         </div>
     </div>
 
-    <div class="intro">
-        
-        
-        
+
+    <div class="spacing">
     </div>
 
+    <!--
+        second row
+    -->
+
+    <div class="row">
+        <div class="column">
+            <p>
+                Borough room para 1
+            </p>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni non similique sunt aut, quia ad itaque dolore minus impedit cupiditate autem eveniet consectetur amet illo magnam, officia est quaerat. Minus aspernatur voluptatibus soluta, veniam molestias doloribus sapiente repellat natus voluptas.
+            </p>
+        </div>
+        <div class="column">
+            <div id="borough_rooms">
+            </div>
+        </div>
+        <div class="column">
+            <p>
+                Borough room para 2
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, recusandae laborum porro accusamus doloremque optio, illo iste, ad natus aliquid ex odit reprehenderit veniam non praesentium corrupti quam suscipit commodi officiis eos sapiente illum alias? Quisquam aliquid magni accusamus deleniti!
+            </p>
+        </div>
+    </div>
+
+    <!--
+        third row
+    -->
+
+    <div class="spacing">
+    </div>
     
+    <div class="row">
+        <div class="column">
+            <div id="borough_price"></div>
+        </div>
+        <div class="column">
+            <p>
+                Borough + Price para
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cumque harum quo sint doloribus exercitationem, odit dignissimos reiciendis quisquam accusamus beatae magnam laboriosam aut voluptatibus omnis tenetur! Ducimus quaerat nulla qui nemo, minima quidem alias in, dolorem modi accusamus consequatur!
+            </p>
+        </div>
+        <div id="column">
+            <div id="freq_price">
+            </div>
+        </div>
+    </div>
     
+    <!-- fourth row -->
+
+    <div class="spacing">
+    </div>
+    
+    <div class="row_last">
+        <div class="column_last">
+            <div id="nights_avail">
+            </div>
+        </div>
+        <div class="column_last">
+            <p>
+                Availability para
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia, voluptates commodi laudantium cum exercitationem ex distinctio cumque perferendis labore sit. Repellat quas et corrupti ipsum totam aliquam assumenda! Beatae a voluptas amet aliquam quibusdam fugiat quas necessitatibus voluptatibus expedita?
+            </p>
+        </div>
+    </div>
+
+    <div class="spacing">
+    </div>
+
 
 <script type="text/javascript">
 
@@ -68,6 +143,30 @@
         // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 
     }).catch(console.error);
+
+    var vg_2 = "js/nights_avail.json";
+        vegaEmbed("#nights_avail", vg_2, { "actions": false }).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+
+        }).catch(console.error);
+    
+    var vg_3 = "js/freq_price.json";
+        vegaEmbed("#freq_price", vg_3, { "actions": false }).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+
+        }).catch(console.error);
+    
+    var vg_4 = "js/borough_price.json";
+        vegaEmbed("#borough_price", vg_4, { "actions": false }).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+
+        }).catch(console.error);
+
+    var vg_5 = "js/borough_rooms.json";
+        vegaEmbed("#borough_rooms", vg_5, { "actions": false }).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+
+        }).catch(console.error);
 
 </script>
 </body>

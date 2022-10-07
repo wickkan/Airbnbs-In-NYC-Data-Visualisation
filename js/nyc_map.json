@@ -1,9 +1,9 @@
 {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"width": 500,
-"height": 340,
+"width": 400,
+"height": 400,
 "background": null,
-"title": { "text": "Spread of Airbnbs Across New York City", "font": "sans-serif","fontSize": {"expr": "20"}},
+"title": { "text": "Spread of Airbnbs Across New York City", "font": "sans-serif","fontSize": {"expr": "18"}},
 "projection": {"type": "equalEarth"},
 "layer": [
 {

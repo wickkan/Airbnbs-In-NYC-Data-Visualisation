@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "height" : 400,
+  "width" : 400,
+  "title": { "text": "Frequency of NYC Airbnb Prices", "font": "sans-serif","fontSize": {"expr": "18"}},
+  "data": {"url": "https://raw.githubusercontent.com/wickkan/FIT3179-Homework-Week-9/main/AB_NYC_2019.csv"},
+  "mark": {
+    "type" : "bar",
+    "clip": true
+  },
+  "encoding": {
+    "x": {
+      "bin": {"maxbins": 200},
+      "field": "price",
+      "title": "Price < 1000",
+      "scale" : { "domain" : [0,1000] }
+    },
+    "y": {
+      "aggregate": "count",
+      "title": "Number of Airbnbs"
+      }
+  }
+}
