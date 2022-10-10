@@ -1,24 +1,123 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {"url": "https://raw.githubusercontent.com/wickkan/FIT3179-Homework-Week-9/main/AB_NYC_2019.csv"},
-  "height" : 400,
-  "width" : 400,
-  "title": { "text": "Price Distribution for Each Borough", "font": "sans-serif","fontSize": {"expr": "18"}},
-  "transform": [{"filter": "datum.neighbourhood_group =='Queens'"}],
+  "background" : null,
+  "vconcat": [ 
+    {
+  "height" : 75,
+  "width" : 300,
+  "title": { "text": "Bronx", "font": "sans-serif","fontSize": {"expr": "15"}},
+  "transform": [{"filter": "datum.neighbourhood_group =='Bronx'"}],
   "mark": {
     "type" : "line",
-    "clip": true
+    "clip": true,
+    "color" : "black"
   },
   "encoding": {
     "x": {
       "field": "price", 
       "type": "quantitative",
       "scale" : { "domain" : [0,500] },
-      "title" : "Price < 500"
+      "axis": {"title": ""}
+      },
+    "y": {
+      "aggregate": "count",
+      "title" : " "
+      }
+  }
+  },
+  {
+  "height" : 75,
+  "width" : 300,
+  "title": { "text": "Brooklyn", "font": "sans-serif","fontSize": {"expr": "15"}},
+  "transform": [{"filter": "datum.neighbourhood_group =='Brooklyn'"}],
+  "mark": {
+    "type" : "line",
+    "clip": true,
+    "color" : "#aac435"
+  },
+  "encoding": {
+    "x": {
+      "field": "price", 
+      "type": "quantitative",
+      "scale" : { "domain" : [0,500] },
+      "axis": {"title": ""}
+      },
+    "y": {
+      "aggregate": "count",
+      "title" : " "
+      }
+  }
+  },
+  {
+  "height" : 75,
+  "width" : 300,
+  "title": { "text": "Manhattan", "font": "sans-serif","fontSize": {"expr": "15"}},
+  "transform": [{"filter": "datum.neighbourhood_group =='Manhattan'"}],
+  "mark": {
+    "type" : "line",
+    "clip": true,
+    "color" : "#6035c4"
+
+  },
+  "encoding": {
+    "x": {
+      "field": "price", 
+      "type": "quantitative",
+      "scale" : { "domain" : [0,500] },
+      "axis": {"title": ""}
       },
     "y": {
       "aggregate": "count",
       "title" : "Number of Airbnbs"
       }
   }
+  },
+  {
+  "height" : 75,
+  "width" : 300,
+  "title": { "text": "Queens", "font": "sans-serif","fontSize": {"expr": "15"}},
+  "transform": [{"filter": "datum.neighbourhood_group =='Queens'"}],
+  "mark": {
+    "type" : "line",
+    "clip": true,
+    "color" : "#ffffff"
+  },
+  "encoding": {
+    "x": {
+      "field": "price", 
+      "type": "quantitative",
+      "scale" : { "domain" : [0,500] },
+      "axis": {"title": ""}
+      },
+    "y": {
+      "aggregate": "count",
+      "title" : " "
+      }
+  }
+  },
+  {
+  "height" : 75,
+  "width" : 300,
+  "title": { "text": "Staten Island", "font": "sans-serif","fontSize": {"expr": "15"}},
+  "transform": [{"filter": "datum.neighbourhood_group =='Staten Island'"}],
+  "mark": {
+    "type" : "line",
+    "clip": true,
+    "color" : "#ba0936"
+  },
+  "encoding": {
+    "x": {
+      "field": "price", 
+      "type": "quantitative",
+      "scale" : { "domain" : [0,500] },
+      "title" : "Price (USD) < 500"
+      },
+    "y": {
+      "aggregate": "count",
+      "title" : ""
+      }
+  }
+  }
+  ]
 }
