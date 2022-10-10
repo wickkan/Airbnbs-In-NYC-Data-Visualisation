@@ -1,12 +1,33 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "height" : 300,
-  "width" : 300,
-    "title": { "text": "Frequency of Different Rooms in Each Borough", "font": "sans-serif","fontSize": {"expr": "18"}},
+  "background" : null,
+  "width" : 315,
+    "title": { "text": "Frequency of Different Rooms in Each Borough", "font": "sans-serif","fontSize": {"expr": "16"}},
   "data": {"url": "https://raw.githubusercontent.com/wickkan/FIT3179-Homework-Week-9/main/AB_NYC_2019.csv"},
   "mark": "bar",
+  "params": [{
+    "name": "room",
+    "bind": {
+      "input": "select",
+      "options" : [
+        null,
+        "Private room",
+        "Entire home/apt",
+        "Shared room"
+      ],
+      "labels": [
+        "Show All",
+        "Private room",
+        "Entire home/apt",
+        "Shared room"
+      ],
+      "name": "Room Type: "
+      
+    }
+  }],
   "transform": [{
-    "filter": "datum.room_type == ['Private room']"
+    "filter": "room == null || datum.room_type == room"
   }],
   "encoding": {
     "x": {
