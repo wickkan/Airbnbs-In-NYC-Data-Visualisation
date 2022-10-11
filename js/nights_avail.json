@@ -1,5 +1,6 @@
 {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+"background" : null,
 "width": 400,
 "height": 400,
 "title": { "text": "Minimum Nights vs Availability", "font": "sans-serif","fontSize": {"expr": "20"}},
