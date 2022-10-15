@@ -1,9 +1,9 @@
 {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"width": 400,
-"height": 400,
+"width": "container",
+"height": 600,
 "background": null,
-"title": { "text": "Spread of Airbnbs Across New York City", "font": "sans-serif","fontSize": {"expr": "18"}},
+"title": { "text": "Spread of Airbnbs Across New York City", "font": "sans-serif","fontSize": {"expr": "25"}},
 "projection": {"type": "equalEarth"},
 "layer": [
 {
@@ -22,7 +22,7 @@
 "encoding": {
   "longitude": {"field": "longitude", "type": "quantitative"},
   "latitude": {"field": "latitude", "type": "quantitative"}, 
-  "color": {"field": "neighbourhood_group", "type": "nominal", "title": "Boroughs"},
+  "color": {"field": "neighbourhood_group", "type": "nominal", "title": "Boroughs", "scale": {"range": ["black", "#aac435", "#6035c4", "#ffffff", "#ba0936"]}},
 "tooltip": [
       {"field": "neighbourhood_group", "type": "nominal", "title": "Borough"},
       {"field": "room_type", "type": "nominal", "title": "Room Type"},

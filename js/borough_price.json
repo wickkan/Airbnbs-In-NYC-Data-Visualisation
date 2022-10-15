@@ -5,19 +5,47 @@
   "vconcat": [ 
     {
   "height" : 75,
-  "width" : 300,
-  "title": { "text": "Bronx", "font": "sans-serif","fontSize": {"expr": "15"}},
-  "transform": [{"filter": "datum.neighbourhood_group =='Bronx'"}],
+  "width" : "container",
+  "title": { "text": "All Boroughs", "font": "sans-serif","fontSize": {"expr": "25"}},
+  "transform": [{"filter": "datum.price <= 500"}],
+  "mark": {
+    "type" : "line",
+    "clip": true,
+    "color" : "yellow"
+  },
+  "encoding": {
+    "x": {
+      "field": "price", 
+      "type": "quantitative",
+      "scale" : { 
+        "domain" : {"param": "brush"}
+        },
+      "axis": {"title": ""}
+      },
+    "y": {
+      "aggregate": "count",
+      "title" : " "
+      }
+  }
+  },
+    {
+  "height" : 75,
+  "width" : "container",
+  "title": { "text": "Bronx", "font": "sans-serif","fontSize": {"expr": "25"}},
+  "transform": [{"filter": "datum.neighbourhood_group =='Bronx' && datum.price <= 500"}],
   "mark": {
     "type" : "line",
     "clip": true,
     "color" : "black"
   },
+  "params": [
+{"name": "brush", "select": {"type": "interval",
+"encodings": ["x"]}}
+],
   "encoding": {
     "x": {
       "field": "price", 
       "type": "quantitative",
-      "scale" : { "domain" : [0,500] },
       "axis": {"title": ""}
       },
     "y": {
@@ -28,19 +56,22 @@
   },
   {
   "height" : 75,
-  "width" : 300,
-  "title": { "text": "Brooklyn", "font": "sans-serif","fontSize": {"expr": "15"}},
-  "transform": [{"filter": "datum.neighbourhood_group =='Brooklyn'"}],
+  "width" : "container",
+  "title": { "text": "Brooklyn", "font": "sans-serif","fontSize": {"expr": "25"}},
+  "transform": [{"filter": "datum.neighbourhood_group =='Brooklyn' && datum.price <= 500"}],
   "mark": {
     "type" : "line",
     "clip": true,
     "color" : "#aac435"
   },
+  "params": [
+{"name": "brush", "select": {"type": "interval",
+"encodings": ["x"]}}
+],
   "encoding": {
     "x": {
       "field": "price", 
       "type": "quantitative",
-      "scale" : { "domain" : [0,500] },
       "axis": {"title": ""}
       },
     "y": {
@@ -51,20 +82,23 @@
   },
   {
   "height" : 75,
-  "width" : 300,
-  "title": { "text": "Manhattan", "font": "sans-serif","fontSize": {"expr": "15"}},
-  "transform": [{"filter": "datum.neighbourhood_group =='Manhattan'"}],
+  "width" : "container",
+  "title": { "text": "Manhattan", "font": "sans-serif","fontSize": {"expr": "25"}},
+  "transform": [{"filter": "datum.neighbourhood_group =='Manhattan' && datum.price <= 500"}],
   "mark": {
     "type" : "line",
     "clip": true,
     "color" : "#6035c4"
 
   },
+  "params": [
+{"name": "brush", "select": {"type": "interval",
+"encodings": ["x"]}}
+],
   "encoding": {
     "x": {
       "field": "price", 
       "type": "quantitative",
-      "scale" : { "domain" : [0,500] },
       "axis": {"title": ""}
       },
     "y": {
@@ -75,19 +109,22 @@
   },
   {
   "height" : 75,
-  "width" : 300,
-  "title": { "text": "Queens", "font": "sans-serif","fontSize": {"expr": "15"}},
-  "transform": [{"filter": "datum.neighbourhood_group =='Queens'"}],
+  "width" : "container",
+  "title": { "text": "Queens", "font": "sans-serif","fontSize": {"expr": "25"}},
+  "transform": [{"filter": "datum.neighbourhood_group =='Queens' && datum.price <= 500"}],
   "mark": {
     "type" : "line",
     "clip": true,
     "color" : "#ffffff"
   },
+  "params": [
+{"name": "brush", "select": {"type": "interval",
+"encodings": ["x"]}}
+],
   "encoding": {
     "x": {
       "field": "price", 
       "type": "quantitative",
-      "scale" : { "domain" : [0,500] },
       "axis": {"title": ""}
       },
     "y": {
@@ -98,19 +135,22 @@
   },
   {
   "height" : 75,
-  "width" : 300,
-  "title": { "text": "Staten Island", "font": "sans-serif","fontSize": {"expr": "15"}},
-  "transform": [{"filter": "datum.neighbourhood_group =='Staten Island'"}],
+  "width" : "container",
+  "title": { "text": "Staten Island", "font": "sans-serif","fontSize": {"expr": "25"}},
+  "transform": [{"filter": "datum.neighbourhood_group =='Staten Island' && datum.price <= 500"}],
   "mark": {
     "type" : "line",
     "clip": true,
     "color" : "#ba0936"
   },
+  "params": [
+{"name": "brush", "select": {"type": "interval",
+"encodings": ["x"]}}
+],
   "encoding": {
     "x": {
       "field": "price", 
       "type": "quantitative",
-      "scale" : { "domain" : [0,500] },
       "title" : "Price (USD) < 500"
       },
     "y": {

@@ -1,24 +1,32 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "background" : null,
-  "height" : 400,
-  "width" : 400,
-  "title": { "text": "Frequency of NYC Airbnb Prices", "font": "sans-serif","fontSize": {"expr": "18"}},
+  "height" : 200,
+  "width" : "container",
+  "title": { "text": "Frequency of NYC Airbnb Prices", "font": "sans-serif","fontSize": {"expr": "25"}},
   "data": {"url": "https://raw.githubusercontent.com/wickkan/FIT3179-Homework-Week-9/main/AB_NYC_2019.csv"},
   "mark": {
     "type" : "bar",
     "clip": true
   },
   "encoding": {
-    "x": {
+    "y": {
       "bin": {"maxbins": 200},
       "field": "price",
-      "title": "Price < 1000",
-      "scale" : { "domain" : [0,1000] }
+      "title": "Price < 500",
+      "scale" : { "domain" : [0,500] }
     },
-    "y": {
+    "x": {
       "aggregate": "count",
       "title": "Number of Airbnbs"
-      }
+      },
+    "color": {
+      "field": "neighbourhood_group",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Bronx", "Brooklyn", "Manhattan", "Staten Island", "Queens"],
+        "range": ["black", "#aac435", "#6035c4", "#ffffff", "#ba0936"]},
+        "title" : "Borough"
   }
+}
 }

@@ -1,175 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
-
+    
     <script src="vega_lite_vis.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-
+    
     <title>FIT3179 - Visualisation 2</title>
 </head>
+
 <body>
-
-    <div class="header_img">
-        <img id="nyc_picture" src="https://www.pngmart.com/files/16/New-York-Skyline-City-Transparent-PNG.png">
-    </div>
-
-    <div class="header_txt">
-        <h1 id="heading">Airbnbs in New York City</h1>
-    </div>
-
-    <div class="spacing">
-    </div>
-
     
-    <!--
-        first row
-    -->
-
-    <div class="row">
-        <div class="column">
-            <p>
-                NYC Map Para 1
-            </p>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex eum rem asperiores inventore officiis debitis error quos odit placeat aspernatur quis reprehenderit aliquam odio distinctio veritatis sed totam minus repellendus beatae, incidunt commodi consectetur quam nesciunt. Quis possimus hic porro.
-            </p>
+        <div class="header_img">
+            <img id="nyc_picture" src="https://www.pngmart.com/files/16/New-York-Skyline-City-Transparent-PNG.png">
         </div>
-        <div class="column">
-            <div id="nyc_map">
+        
+        <div class="header_txt">
+            <h1 id="heading">Airbnbs in New York City</h1>
+        </div>
+        
+        <div class="spacing">
+        </div>
+
+        <div class="pure-u-1">
+            <div id="text_intro">
+                <h1>
+                    Introduction
+                </h1>
+                <p>
+                    Airbnbs are a way for people who have space in their accommodation to host travellers looking for a place to stay. Over the years, airbnbs have grown in popularity and there are more than a million hosts and customers that book unique accommodation anywhere in the world.
+                </p>
+                <p>
+                    New York City is one of the most populated cities in the United States. It is home to more than 18 million people and this number is growing at a drastic rate every year. With that being the case, there are bound to be plenty of airbnb hosts and tourists looking to rent a space. This webpage will serve as a means to analyse and visualise the popularity, price distribution and availability of airbnbs in certain places in New York City. 
+                </p>
             </div>
         </div>
-        <div class="column">
-            <p>
-                NYC Map Para 2
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus laborum numquam ad, facere accusantium doloremque libero? Deleniti eveniet architecto tenetur veniam libero atque voluptatibus fugit nihil consequuntur recusandae ex iste officia sint rem esse cumque quos, cupiditate iure aliquid. Eum.
-            </p>
+
+        <div class="spacing">
         </div>
-    </div>
 
-
-    <div class="spacing">
-    </div>
-
-    <!--
-        second row
-    -->
-
-    <div class="row">
-        <div class="column">
-            <p>
-                Borough room para 1
-            </p>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni non similique sunt aut, quia ad itaque dolore minus impedit cupiditate autem eveniet consectetur amet illo magnam, officia est quaerat. Minus aspernatur voluptatibus soluta, veniam molestias doloribus sapiente repellat natus voluptas.
-            </p>
-        </div>
-        <div class="column">
-            <div id="borough_rooms">
+        <div class="pure-u-1">
+            <div id="text_bubble">
+                <h1>
+                    Popularity
+                </h1>
+                <p>
+                    The map below illustrates the distribution of airbnbs across New York City. As we can see, nearly the entirety of Manhattan is covered with airbnbs. This can be attributed to the fact that it is home to many tourist attractions such as Broadway shows, world-class museums and Greenwich Village. Brooklyn also comes close to Manhattan, whereas the borough of Staten Island has a lot fewer airbnbs - most likely because there are only two main access points - via the Staten Island Ferry or driving over the Verazzano Narrows Bridge.
+                </p>
+                <p>
+                    The bar chart below the map displays the frequency of different rooms in each borough. For a shared room and entire home/apartment the boroughs with the most airbnbs remains in the same order - Manhattan, Brooklyn, Queens, Bronx and then Staten Island. However, when it comes to a private room, there are more airbnbs in Brooklyn than in Manhattan. This could be attributed to the fact that rent prices in Manhattan are higher than in any other borough. Although there are more airbnbs in Manhattan, it is much more difficult to get a private room in Manhattan because hosts could make more by hosting more guests in shared rooms.
+                </p>
             </div>
         </div>
-        <div class="column">
-            <p>
-                Borough room para 2
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, recusandae laborum porro accusamus doloremque optio, illo iste, ad natus aliquid ex odit reprehenderit veniam non praesentium corrupti quam suscipit commodi officiis eos sapiente illum alias? Quisquam aliquid magni accusamus deleniti!
-            </p>
+
+        <div class="spacing">
         </div>
-    </div>
 
-    <!--
-        third row
-    -->
+        <div class="pure-u-1">
+            <div id="nyc_map"></div>
+        </div>
 
-    <div class="spacing">
-    </div>
-    
-    <div class="row">
-        <div class="column">
+        <div class="pure-u-1">
+            <div id="borough_rooms"></div>
+        </div>
+
+
+        <div class="pure-u-1">
+            <div id="text_bubble">
+                <h1>
+                    Price
+                </h1>
+                <p>
+                    The line charts below illustrate the rise and fall of airbnbs for varying ranges of price. Queens has the smallest range of prices ($20-$200) with a very consistent decline after $200 per night. Brooklyn and Manhattan have the largest range of prices which could be because they also have the highest number of airbnbs. $100, $150 and $200 per night seem to be the most popular prices set for an airbnb in New York City.
+                </p>
+                <p>
+                    The stacked histogram below the line charts shows that Bronx, Brooklyn and Staten Island opt to provide more cheaper airbnb alternatives compared to their Manhattan and Queens counterparts. The popularity of Manhattan and extreme rent prices means Manhattan may set higher prices for their airbnbs. 
+                </p>
+            </div>
+        </div>
+
+        <div class="spacing">
+        </div>
+
+        
+        <div class="pure-u-1">
             <div id="borough_price"></div>
         </div>
-        <div class="column">
-            <p>
-                Borough + Price para
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cumque harum quo sint doloribus exercitationem, odit dignissimos reiciendis quisquam accusamus beatae magnam laboriosam aut voluptatibus omnis tenetur! Ducimus quaerat nulla qui nemo, minima quidem alias in, dolorem modi accusamus consequatur!
-            </p>
+        
+        <div class="pure-u-1">
+            <div id="freq_price"></div>
         </div>
-        <div id="column">
-            <div id="freq_price">
+
+        <div class="pure-u-1">
+            <div id="text_bubble">
+                <h1>
+                    Availability
+                </h1>
+                <p>
+                    Minimum nights are the minimum number of nights a hostee must stay at the airbnb. Availability is the number of days the airbnb is available each year on average. As we can see from the scatterplot below, the lower the number of minimum nights, the more available the airbnbs are. With that being said, there are a lot of airbnbs that are not available throughout the year despite having a low minimum nights requirement. As the minimum number of nights increases there are more airbnbs that are available throughout the year due to the high minimum number of nights required to stay. The reason why there might be a lot of airbnbs available even though the minimum nights requirement is low is that they are situated in an unpopular borough such as Queens or Staten Island or the hosts only decide to rent out the place when they are on holiday.    
+                </p>
             </div>
         </div>
-    </div>
-    
-    <!-- fourth row -->
 
-    <div class="spacing">
-    </div>
-    
-    <div class="row_last">
-        <div class="column_last">
-            <div id="nights_avail">
+        <div class="spacing">
+        </div>
+
+        <div class="pure-u-1">
+            <div id="nights_avail"></div>
+        </div>
+
+        <div class="pure-u-1">
+            <div id="text_bubble">
+                <h1>
+                    Conclusion
+                </h1>
+                <p>
+                    Manhattan and Brooklyn are the most popular boroughs for airbnbs so if you are looking for a wide variety of room types and prices then those are the two boroughs to visit. Staten Island, although having the fewest airbnbs, can serve as a cheaper alternative to the boroughs that are on the main island of New York City.
+                </p>
+                <p>
+                                        Overall, many interesting trends and information were drawn from the 2019 data on New York City airbnbs.
+
+                </p>
             </div>
         </div>
-        <div class="column_last">
-            <p>
-                Availability para
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quia, voluptates commodi laudantium cum exercitationem ex distinctio cumque perferendis labore sit. Repellat quas et corrupti ipsum totam aliquam assumenda! Beatae a voluptas amet aliquam quibusdam fugiat quas necessitatibus voluptatibus expedita?
-            </p>
+
+        <div class="spacing">
         </div>
+
+        
     </div>
 
-    <div class="spacing">
-    </div>
 
+    <script type="text/javascript">
+        
 
-<script type="text/javascript">
+        
 
-    var vg_1 = "js/nyc_map.json";
-    vegaEmbed("#nyc_map", vg_1, { "actions": false }).then(function (result) {
-        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-
-    }).catch(console.error);
-
-    var vg_2 = "js/nights_avail.json";
-        vegaEmbed("#nights_avail", vg_2, { "actions": false }).then(function (result) {
+        var nyc_map = "js/nyc_map.json";
+        vegaEmbed('#nyc_map', nyc_map, { "actions": false }).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-
-        }).catch(console.error);
-    
-    var vg_3 = "js/freq_price.json";
-        vegaEmbed("#freq_price", vg_3, { "actions": false }).then(function (result) {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-
-        }).catch(console.error);
-    
-    var vg_4 = "js/borough_price.json";
-        vegaEmbed("#borough_price", vg_4, { "actions": false }).then(function (result) {
-            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-
         }).catch(console.error);
 
-    var vg_5 = "js/borough_rooms.json";
-        vegaEmbed("#borough_rooms", vg_5, { "actions": false }).then(function (result) {
+        var borough_rooms = "js/borough_rooms.json";
+        vegaEmbed('#borough_rooms', borough_rooms, { "actions": false }).then(function (result) {
             // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-
         }).catch(console.error);
 
-</script>
+        var freq_price = "js/freq_price.json";
+        vegaEmbed('#freq_price', freq_price, { "actions": false }).then(function (result) {
+            // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+        }).catch(console.error);
+
+        var borough_price = "js/borough_price.json";
+            vegaEmbed('#borough_price', borough_price, { "actions": false }).then(function (result) {
+                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);
+        
+        var nights_avail = "js/nights_avail.json";
+            vegaEmbed('#nights_avail', nights_avail, { "actions": false }).then(function (result) {
+                // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+            }).catch(console.error);    
+    </script>
+
 </body>
+
 </html>

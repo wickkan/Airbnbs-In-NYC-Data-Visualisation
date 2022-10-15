@@ -1,9 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "height" : 300,
+  "width": "container",
+"height": 200,
   "background" : null,
-  "width" : 315,
-    "title": { "text": "Frequency of Different Rooms in Each Borough", "font": "sans-serif","fontSize": {"expr": "16"}},
+    "title": { "text": "Frequency of Different Rooms in Each Borough", "font": "sans-serif","fontSize": {"expr": "25"}},
   "data": {"url": "https://raw.githubusercontent.com/wickkan/FIT3179-Homework-Week-9/main/AB_NYC_2019.csv"},
   "mark": "bar",
   "params": [{
@@ -30,19 +30,20 @@
     "filter": "room == null || datum.room_type == room"
   }],
   "encoding": {
-    "x": {
+    "y": {
       "field": "neighbourhood_group",
       "title" : ["Borough"],
       "axis" : {"labelAngle": 0}
       },
-    "y": {
+    "x": {
       "aggregate": "count", 
       "field": "precipitation",
       "title" : "Number of Airbnbs"
       },
     "color" : {
       "field" : "neighbourhood_group",
-      "title" : "Borough"
+      "title" : "Borough",
+      "scale": {"range": ["black", "#aac435", "#6035c4", "#ffffff", "#ba0936"] }
     }
   }
 }
