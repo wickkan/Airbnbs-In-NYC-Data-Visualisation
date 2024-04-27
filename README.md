@@ -1,5 +1,5 @@
 # A Data Visualisation of Airbnbs in New York City
 
-I used vega lite, html and css
+The website is currently being worked on
 
 https://wickkan.github.io/FIT3179-Vis-2/
