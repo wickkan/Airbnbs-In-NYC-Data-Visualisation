@@ -1,4 +1,4 @@
-# A Data Visualisation of Airbnbs in New York City
+# Data Visualisation of Airbnbs in New York City
 
 The website is currently being worked on
 
