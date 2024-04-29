@@ -1,5 +1,5 @@
 # Data Visualisation of Airbnbs in New York City
 
-The website is currently being worked on
+Link to website below:
 
-https://wickkan.github.io/FIT3179-Vis-2/
+https://wickkan.github.io/Airbnbs-In-NYC-Data-Visualisation/
